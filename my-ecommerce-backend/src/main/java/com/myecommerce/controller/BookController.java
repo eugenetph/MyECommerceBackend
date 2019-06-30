@@ -1,6 +1,7 @@
 package com.myecommerce.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.log4j.Logger;
 import com.myecommerce.model.Book;
@@ -20,7 +21,7 @@ public class BookController {
 	private BookService bookService; 
 	
 	@RequestMapping(value = "/books/{id}", method = RequestMethod.GET)
-	public Book getBook(@PathVariable int id) {
+	public Optional<Book> getBook(@PathVariable String id) {
 		logger.info("Entering getBook method");
 		return bookService.getBook(id);
 	}

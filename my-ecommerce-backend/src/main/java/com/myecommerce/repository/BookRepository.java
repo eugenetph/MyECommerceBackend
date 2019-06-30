@@ -1,9 +1,9 @@
 package com.myecommerce.repository;
 
-//package com.myecommerce.repository;
-//
-//import org.springframework.data.repository.CrudRepository;
-//
-//public interface BookRepository extends CrudRepository<String, String> {
-//
-//}
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.myecommerce.model.Book;
+
+public interface BookRepository extends JpaRepository<Book, String> {
+
+}

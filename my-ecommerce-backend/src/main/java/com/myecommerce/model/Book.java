@@ -1,8 +1,13 @@
 package com.myecommerce.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
 
-	public int id;
+	@Id
+	public String id;
 	
 	public String title;
 	
@@ -10,18 +15,20 @@ public class Book {
 	
 	public double cost;
 	
-	public Book(int id, String title, String description, double cost) {
+	public Book(String id, String title, String description, double cost) {
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.cost = cost;
 	}
+	
+	public Book() {}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	
